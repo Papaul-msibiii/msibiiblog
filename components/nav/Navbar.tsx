@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import React from "react";
 import LoginForm from "./LoginForm";
@@ -8,7 +8,7 @@ import Profile from "./Profile";
 export default function Navbar() {
   const user = useUser((state) => state.user);
 
-  console.log({user})
+  console.log({ user });
 
   return (
     <nav className="flex items-center justify-between ">
@@ -18,7 +18,7 @@ export default function Navbar() {
         </Link>
         <div className="h-1 w-0 group-hover:w-full transition-all bg-green-500"></div>
       </div>
-      {user ? <Profile /> :  <LoginForm />}
+      {user ? <Profile /> : <LoginForm />}
     </nav>
   );
 }

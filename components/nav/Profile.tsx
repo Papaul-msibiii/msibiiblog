@@ -51,13 +51,13 @@ export default function Profile() {
           </Button>
         </Link>
         <Button
-            variant="ghost"
-            className="w-full flex items-center justify-between"
-            onClick={handleLogout}
-          >
-            Logout
-            <LockOpen1Icon />
-          </Button>
+          variant="ghost"
+          className="w-full flex items-center justify-between"
+          onClick={handleLogout}
+        >
+          Logout
+          <LockOpen1Icon />
+        </Button>
       </PopoverContent>
     </Popover>
   );
