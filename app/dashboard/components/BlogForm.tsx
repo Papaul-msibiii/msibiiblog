@@ -254,7 +254,7 @@ export default function BlogForm({
                       "overflow-y-auto",
                       isPreview
                         ? "mx-auto w-full lg:w-4/5"
-                        : "w-1/2 lg:block hidden"
+                        : "w-1/2 lg:block hidden px-3"
                     )}
                   >
                     <MarkdownPreview content={form.getValues().content} />
