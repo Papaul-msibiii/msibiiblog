@@ -1,5 +1,4 @@
-import { DiscordLogoIcon, GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { Target } from "lucide-react";
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import React from "react";
 
@@ -18,17 +17,18 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-2">
             <Link target="_blank" href={"https://github.com/Papaul-msibiii/"}>
-                <GitHubLogoIcon className="w-5 h-5" />
+              <GitHubLogoIcon className="w-5 h-5" />
             </Link>
-            <Link target="_blank" href={"https://www.linkedin.com/in/paul-gomis/"}>
-                <LinkedInLogoIcon className="w-5 h-5" />
+            <Link
+              target="_blank"
+              href={"https://www.linkedin.com/in/paul-gomis/"}
+            >
+              <LinkedInLogoIcon className="w-5 h-5" />
             </Link>
             {/* <DiscordLogoIcon className="w-5 h-5" /> */}
           </div>
         </div>
-        <h1>
-            &copy; 2024 Paul Msibii. All right reserved
-        </h1>
+        <h1>&copy; 2024 Paul Msibii. All right reserved</h1>
       </div>
     </footer>
   );
