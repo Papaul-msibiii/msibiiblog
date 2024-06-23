@@ -65,7 +65,7 @@ export type Database = {
       users: {
         Row: {
           created_at: string
-          description_status: boolean
+          subscription_status: boolean
           display_name: string
           email: string
           id: string
@@ -76,7 +76,7 @@ export type Database = {
         }
         Insert: {
           created_at?: string
-          description_status?: boolean
+          subscription_status?: boolean
           display_name: string
           email: string
           id: string
@@ -87,7 +87,7 @@ export type Database = {
         }
         Update: {
           created_at?: string
-          description_status?: boolean
+          subscription_status?: boolean
           display_name?: string
           email?: string
           id?: string
