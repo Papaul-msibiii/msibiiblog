@@ -6,14 +6,14 @@ import { title } from "process";
 
 export async function generateStaticParams() {
   const { data: blog } = await fetch(
-    process.env.SITE_URL + "/api/blog?id=" + "*"
+    process.env.PROD_URL + "/api/blog?id=" + "*"
   ).then((res) => res.json());
   return blog;
 }
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const { data: blog } = (await fetch(
-    process.env.SITE_URL + "/api/blog?id=" + params.id
+    process.env.PROD_URL + "/api/blog?id=" + params.id
   ).then((res) => res.json())) as { data: IBlog };
 
   return {
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     },
     openGraph: {
       title: blog?.title,
-      url: process.env.SITE_URL + "/blog/" + params.id,
+      url: process.env.PROD_URL + "/blog/" + params.id,
       siteName: "Msibii blog",
       images: blog?.image_url,
       type: "website",
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 
 export default async function page({ params }: { params: { id: string } }) {
   const { data: blog } = (await fetch(
-    process.env.SITE_URL + "/api/blog?id=" + params.id
+    process.env.PROD_URL + "/api/blog?id=" + params.id
   ).then((res) => res.json())) as { data: IBlog };
 
   if (!blog?.id) {
