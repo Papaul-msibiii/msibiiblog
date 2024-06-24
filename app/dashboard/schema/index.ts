@@ -18,8 +18,9 @@ export const blogFormSchema = z
       try {
         const url = new URL(image_url);
 
-        // return url.hostname === "images.unsplash.com";
-        return url.hostname === "plus.unsplash.com";
+        return url.hostname === "images.unsplash.com" || url.hostname === "plus.unsplash.com";
+        // return url.hostname === "plus.unsplash.com";
+        // return url.hostname === "unsplash.com";
       } catch {
         return false;
       }
